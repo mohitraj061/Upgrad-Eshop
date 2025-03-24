@@ -1,9 +1,9 @@
 import './App.css';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import PageSetUp from "./components/pageSetUp/PageSetUp";
-import {useDispatch} from "react-redux";
-import {useCallback, useContext, useEffect} from "react";
-import {initCatalog} from "./store/actions/metadataAction";
+import { useDispatch } from "react-redux";
+import { useCallback, useContext, useEffect } from "react";
+import { initCatalog } from "./store/actions/metadataAction";
 import useAuthentication from "./hooks/useAuthentication";
 
 const theme = createTheme({
@@ -22,8 +22,8 @@ const theme = createTheme({
 
 function App() {
 
-	const {AuthCtx} = useAuthentication();
-	const {accessToken} = useContext(AuthCtx);
+	const { AuthCtx } = useAuthentication();
+	const { accessToken } = useContext(AuthCtx);
 	const dispatch = useDispatch();
 
 	const initPageData = useCallback(() => {

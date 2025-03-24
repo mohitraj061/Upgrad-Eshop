@@ -9,8 +9,8 @@ import useAuthentication from "./hooks/useAuthentication";
 import useServices from "./hooks/useServices";
 
 const ConnectedApp = () => {
-	const {AuthProvider} = useAuthentication();
-	const {ServicesProvider} = useServices();
+	const { AuthProvider } = useAuthentication();
+	const { ServicesProvider } = useServices();
 	return (
 		<AuthProvider>
 			<ServicesProvider>
